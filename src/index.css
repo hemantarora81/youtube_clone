@@ -91,4 +91,7 @@ a {
   .search-bar{
     width:100px;
   }
+  . search-icon{
+    width: 20px;
+  }
 }
