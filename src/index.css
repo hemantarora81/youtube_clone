@@ -94,5 +94,17 @@ a {
   }
   .search-bar{
     width:200px;
+    border: none !important;
+  }
+  .react-player-box{
+    padding: 0px !important;
+    margin: 0 !important;
+  }
+  .youtube-write{
+    display: none;
+  }
+  .css-5mfo1x-MuiPaper-root{
+      background: transparent !important;
   }
 }
+
