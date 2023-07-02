@@ -93,7 +93,6 @@ a {
     height: 45vh !important;
   }
   .search-bar{
-<<<<<<< HEAD
     width:200px;
     border: none !important;
   }
@@ -106,12 +105,20 @@ a {
   }
   .css-5mfo1x-MuiPaper-root{
       background: transparent !important;
-=======
-    width:100px;
+    /* width:100px; */
   }
-  . search-icon{
+  .search-icon{
     width: 20px;
->>>>>>> b5f08e457f42466016adf7559f0c64751daaf671
   }
+  .css-15uirwa-MuiPaper-root{
+    background: none !important;
+  }
+ 
+}
+@media (min-width: 600px){
+.css-5mfo1x-MuiPaper-root {
+    /* width: 397px; */
+    margin-right: 40px;
+}
 }
 

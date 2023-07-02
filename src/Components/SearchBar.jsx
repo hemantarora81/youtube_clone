@@ -20,11 +20,11 @@ const SearchBar = () => {
         component='form'
         onSubmit={handleSubmit}
         sx={{
-          borderRadius: 10,
+          borderRadius: 20,
           border: '1px solid #e3e3e3',
           pl: 2,
           boxShadow: 'none',
-          width:{sm:'30px'},
+          // width:{sm:'30px'},
           mr: { sm: 5 },
         }}
       >
