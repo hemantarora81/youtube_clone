@@ -93,6 +93,7 @@ a {
     height: 45vh !important;
   }
   .search-bar{
+<<<<<<< HEAD
     width:200px;
     border: none !important;
   }
@@ -105,6 +106,12 @@ a {
   }
   .css-5mfo1x-MuiPaper-root{
       background: transparent !important;
+=======
+    width:100px;
+  }
+  . search-icon{
+    width: 20px;
+>>>>>>> b5f08e457f42466016adf7559f0c64751daaf671
   }
 }
 
