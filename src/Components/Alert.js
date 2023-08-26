@@ -9,7 +9,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 
 export default function AlertDialog({ user }) {
-  console.log(user);
+  // console.log(user);
   const [open, setOpen] = React.useState(false);
   const logout = () => {
     signOut(auth);
@@ -26,13 +26,13 @@ export default function AlertDialog({ user }) {
     setOpen(true);
     return;
   };
-  console.log(handleClickOpen);
+  // console.log(handleClickOpen);
 
   const handleClose = () => {
     // console.log("Closing dialog...");
     setOpen(false);
   };
-  console.log(handleClose);
+  // console.log(handleClose);
 
   return (
     <div>
