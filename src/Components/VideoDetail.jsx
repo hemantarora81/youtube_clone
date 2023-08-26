@@ -16,6 +16,7 @@ const VideoDetail = () => {
     fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`).then(
       (data) => setVideos(data.items)
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (!VideoDetail?.snippet) return <Loader />;
   const {

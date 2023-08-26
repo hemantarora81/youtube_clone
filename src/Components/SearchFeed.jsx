@@ -47,6 +47,7 @@ const Feed = () => {
     fetchFromAPI(`search?part=snippet&q=${searchTerm}}`).then((data) =>
       setVideos(data.items)
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

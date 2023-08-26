@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import SearchBar from "./SearchBar";
+import AuthModal from "./Authentication/AuthModal";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase";
+import AlertDialog from "./Alert";
 const Navbar = () => {
+  const [user, setUser] = useState();
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) setUser(user);
+      else setUser(null);
+      // console.log(user);
+    });
+  }, []);
   return (
     <Stack
       direction="row"
@@ -34,6 +46,7 @@ const Navbar = () => {
         </span>
       </Link>
       <SearchBar />
+      {user ? <AlertDialog user={user} /> : <AuthModal />}
     </Stack>
   );
 };
