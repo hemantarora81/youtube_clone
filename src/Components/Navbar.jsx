@@ -20,26 +20,29 @@ const Navbar = () => {
     <Stack
       direction="row"
       alignItems="center"
-      p={2}
+      display="flex"
+      p={1}
       sx={{
         position: "sticky",
-        background: "#000",
+        background: "#F5F5F5",
         top: 0,
         justifyContent: "space-between",
         borderBottom: "1px solid #aba7a6",
         marginBottom: "5px",
       }}
+      className="navbar-header"
     >
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-        <img src={logo} alt="logo" height={45} />
+        <img src={logo} alt="logo" height={30} />
         <span
           className="youtube-write"
           style={{
-            fontWeight: "700",
+            fontWeight: "bold",
             marginLeft: "2px",
-            fontSize: "32px",
-            color: "#fff",
+            fontSize: "22px",
+            color: "#000",
             fontStyle: "normal",
+            textDecoration: "underline",
           }}
         >
           Youtube

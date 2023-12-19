@@ -55,7 +55,7 @@ const SearchBar = () => {
             pl: 2,
             boxShadow: "none",
             width: "auto",
-            maxWidth: 500,
+            maxWidth: 400,
           }}
         >
           <InputBase

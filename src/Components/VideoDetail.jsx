@@ -13,11 +13,13 @@ const VideoDetail = () => {
     fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) =>
       setVideoDetail(data.items[0])
     );
+
     fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`).then(
       (data) => setVideos(data.items)
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  console.log(videos);
   if (!VideoDetail?.snippet) return <Loader />;
   const {
     snippet: { title, channelId, channelTitle },
@@ -32,7 +34,6 @@ const VideoDetail = () => {
               width: "100%",
               position: "sticky",
               top: "78px",
-              paddingLeft: "5px",
             }}
             className="react-player-box"
           >
@@ -41,25 +42,25 @@ const VideoDetail = () => {
               className="react-player"
               controls
             />
-            <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
+            <Typography color="#000" variant="h5" fontWeight="bold" p={2}>
               {title}
             </Typography>
             <Stack
               direction="row"
               justifyContent="space-between"
-              sx={{ color: "#fff", textDecoration: "underline" }}
+              sx={{ color: "#000", textDecoration: "underline" }}
               py={1}
               px={2}
             >
-              <Link to={`/channel/${channelId}`}>
+              <Link to={`/channel/${channelId}`} target="_blank">
                 <Typography
                   variant={{ sm: "subtitle1", md: "h6" }}
-                  color="#fff"
+                  color="#000"
                   fontWeight="bold"
                 >
                   {channelTitle}
                   <CheckCircle
-                    sx={{ fontSize: "12px", color: "#fff", ml: "5px" }}
+                    sx={{ fontSize: "12px", color: "#000", ml: "5px" }}
                   />
                 </Typography>
               </Link>
@@ -72,7 +73,7 @@ const VideoDetail = () => {
                   {parseInt(viewCount).toLocaleString()} views
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{ opacity: 0.7 }}
                   fontWeight="bold"
                 >
